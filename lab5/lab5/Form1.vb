@@ -17,7 +17,7 @@ Public Class frmMain
                 reader.Close()
             End If
         Catch ex As Exception
-            txtMain.Text = "error"
+            MessageBox.Show("error")
         End Try
 
     End Sub
@@ -26,11 +26,16 @@ Public Class frmMain
 
 
     Private Sub SaveCtrlSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveCtrlSToolStripMenuItem.Click
+        SaveFileDialog1.Filter = "Text Files|*.txt"
+        Dim strFullPath As String = SaveFileDialog1.FileName
+
+
 
     End Sub
 
     Public Sub Save()
-
+        Dim fileWrite As New FileStream(strFullPath, FileMode.Create, FileAccess.Write)
+        Dim writer As New StreamWriter(fileWrite)
     End Sub
 
 
