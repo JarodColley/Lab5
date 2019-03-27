@@ -1,11 +1,6 @@
 ﻿Option Strict On
 Imports System.IO
 Public Class frmMain
-
-
-
-
-
     Private Sub OpenCtrlOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenCtrlOToolStripMenuItem.Click
         OpenFileDialog1.Filter = "Text Files|*.txt"
         Try
