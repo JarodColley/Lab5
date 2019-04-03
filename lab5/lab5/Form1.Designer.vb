@@ -22,6 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,6 +39,7 @@ Partial Class frmMain
         Me.txtMain = New System.Windows.Forms.TextBox()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -50,6 +52,7 @@ Partial Class frmMain
         Me.MenuStrip.Size = New System.Drawing.Size(800, 28)
         Me.MenuStrip.TabIndex = 0
         Me.MenuStrip.Text = "MenuStrip"
+        Me.ToolTip.SetToolTip(Me.MenuStrip, "Menu Strip with options")
         '
         'FileToolStripMenuItem
         '
@@ -102,21 +105,21 @@ Partial Class frmMain
         '
         Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
         Me.CopyToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(169, 26)
         Me.CopyToolStripMenuItem.Text = "&Copy"
         '
         'CutToolStripMenuItem
         '
         Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
         Me.CutToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(169, 26)
         Me.CutToolStripMenuItem.Text = "Cu&t"
         '
         'PasteToolStripMenuItem
         '
         Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
         Me.PasteToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
-        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(169, 26)
         Me.PasteToolStripMenuItem.Text = "&Paste"
         '
         'HelpToolStripMenuItem
@@ -129,7 +132,7 @@ Partial Class frmMain
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(125, 26)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(216, 26)
         Me.AboutToolStripMenuItem.Text = "A&bout"
         '
         'txtMain
@@ -141,6 +144,7 @@ Partial Class frmMain
         Me.txtMain.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtMain.Size = New System.Drawing.Size(800, 422)
         Me.txtMain.TabIndex = 1
+        Me.ToolTip.SetToolTip(Me.txtMain, "Displays file contents")
         '
         'OpenFileDialog1
         '
@@ -180,4 +184,5 @@ Partial Class frmMain
     Friend WithEvents txtMain As TextBox
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents ToolTip As ToolTip
 End Class

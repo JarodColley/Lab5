@@ -79,4 +79,10 @@ Public Class frmMain
     Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
         txtMain.Text += My.Computer.Clipboard.GetText()
     End Sub
+
+    Private Sub AboutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutToolStripMenuItem.Click
+        MessageBox.Show("NETD 2202
+Lab #5
+Jarod Colley")
+    End Sub
 End Class
